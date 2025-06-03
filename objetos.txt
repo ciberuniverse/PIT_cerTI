@@ -1,0 +1,101 @@
+Poción pequeña
+Poción media
+Poción grande
+Superpoción
+Hiperpoción
+Poción mágica
+Poción energizante
+Poción curativa
+Baya Aranja
+Baya Ziuela
+Baya Meloc
+Baya Oram
+Hierba fresca
+Hierba revivir
+Leche Mu-Mu
+Agua fresca
+Refresco
+Limonada
+Vitaminas Pokémon
+Suero vital
+Cristal de vida
+Aceite curativo
+Fragmento de luz
+Néctar revitalizante
+Cápsula de energía
+Elixir Pokémon
+Té medicinal
+Tónico básico
+Tónico avanzado
+Jugo de bayas
+Gel de recuperación
+Spray energizante
+Brebaje misterioso
+Gotitas de vida
+Esencia de bosque
+Polvo de luna
+Polvo estelar
+Raíz vital
+Caramelo curativo
+Baya salvaje
+Sopa de bayas
+Jugo de cactus
+Concentrado herbal
+Suplemento natural
+Baya energética
+Té de hierbas
+Alga curativa
+Hoja sagrada
+Fruta brillante
+Esencia de sol
+Agua de manantial
+Roca vital
+Aura condensada
+Gema purificadora
+Agua bendita
+Mezcla revitalizante
+Perla curativa
+Néctar celestial
+Cristal de energía
+Extracto de Pokémon
+Fragmento de aurora
+Resplandor de vida
+Ambrosía Pokémon
+Baya fantasma
+Pétalo de rosa lunar
+Aceite sagrado
+Hierba azul
+Jugo de flor solar
+Nube embotellada
+Espora mágica
+Rama de vida
+Infusión curativa
+Jarabe de lino
+Miel de monte
+Té de pétalos
+Bruma restauradora
+Vial de resurrección
+Hierba luminosa
+Agua polar
+Chispa curativa
+Cristal de nieve
+Luz líquida
+Extracto de rayos
+Hoja encantada
+Cápsula solar
+Luz de esperanza
+Miel curativa
+Baya secreta
+Hojas dulces
+Neblina de salud
+Aura mágica
+Savia vital
+Néctar volcánico
+Núcleo de energía
+Jugo tropical
+Tónico de estrellas
+Perla de bosque
+Fruta de la aurora
+Baya elemental
+Gema medicinal
+Célula de vida
