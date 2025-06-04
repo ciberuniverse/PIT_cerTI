@@ -148,8 +148,7 @@ def resolve_tecnical(*args):
         print(":: cerTI-cli :: Tu ID no cumple con el formato establecido ::")
         return
     
-    valid_()
-    solve_()
+    solve_() if valid_() else exit(0)
 
 if __name__ == "__main__":
     
@@ -165,12 +164,9 @@ if __name__ == "__main__":
 
     if argv[1] == "--check":
         valid_()
-        pass
 
     elif argv[1] == "--solve":
-        valid_()
-        solve_()
-        pass
+        solve_() if valid_() else exit(0)
 
     else:
         print(usage_)
