@@ -1,7 +1,5 @@
 import certi
 
-certi.FILE_CODE = "certificacion_PIT.py"
-
 vida_sobreviviente = 0
 type_de_instancia_pokemon = None
 objeto_curador = ""

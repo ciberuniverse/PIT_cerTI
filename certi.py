@@ -1,14 +1,27 @@
 from hashlib import md5
 from json import loads
 from sys import argv
+import os
 import requests
 
 TERMINAL = False
-DOMAIN_HOST = "http://127.0.0.1:5000/solve"
-params_ = ["--check", "--solve"]
-
 FILE_CODE = None
-"""Esta variable se rellena usando el nombre de tu archivo que estas programando"""
+DOMAIN_HOST = "http://127.0.0.1:5000/solve"
+
+params_ = ["--check", "--solve"]
+all_dirs = os.listdir(".")
+
+# Esto busca el archivo a escanear dentro de la carpeta de manera semantica
+for x in all_dirs:
+
+    if "certificacion_" in x:
+        FILE_CODE = x
+        """Esta variable se rellena usando el nombre de tu archivo que estas programando"""
+        break
+
+if not FILE_CODE:
+    print("[ERROR] No estas ejecutando el archivo desde la carpeta de certificacion tecnica.")
+    exit(0)
 
 RESP_SOLVE = None
 """Esta variable deberia de contener tu respuesta codificada en str"""
@@ -18,11 +31,11 @@ ID = None
 
 usage_ = """
 Uso: 
-    ceri.py --check|send <tu_codigo_de_solucion> -R <tu_archivo_de_respuestas> -ID <ID_Proporcionada_en_cerTI>
+    ceri.py --check|send -R <tu_archivo_de_respuestas> -ID <ID_Proporcionada_en_cerTI>
 
 Ejemplo:
-    certy.py --check solucion.py -R respuestas.txt -ID PIT:d5098d199d0de6dacc877537cf6aab28
-    certy.py --solve solucion.py -R respuestas.txt -ID PIT:d5098d199d0de6dacc877537cf6aab28
+    certy.py --check -R respuestas.txt -ID PIT:d5098d199d0de6dacc877537cf6aab28
+    certy.py --solve -R respuestas.txt -ID PIT:d5098d199d0de6dacc877537cf6aab28
 
 --check: Realiza una validacion de tu respuesta comparando las respuestas esperadas
          localmente para verificar tus respuestas.
@@ -89,6 +102,11 @@ def valid_():
 
     try:
         semantic_ = requests.get(DOMAIN_HOST, params = params)
+        
+        if "{" not in semantic_.text:
+            print(semantic_.text)
+            exit(0)
+
         response_  = loads(semantic_.text)
 
     except Exception as err:
@@ -154,13 +172,12 @@ if __name__ == "__main__":
     
     TERMINAL = True
 
-    if len(argv) != 7 or all(x != argv[1] for x in params_) or "-R" not in argv or "-ID" not in argv:
+    if len(argv) != 6 or all(x != argv[1] for x in params_) or "-R" not in argv or "-ID" not in argv:
         print(usage_); exit(0)
 
-    FILE_CODE = argv[2]
     RESP_SOLVE = argv[4]
 
-    ID = argv[6]
+    ID = argv[5]
 
     if argv[1] == "--check":
         valid_()
