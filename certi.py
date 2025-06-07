@@ -133,7 +133,7 @@ def solve_():
         # Si es que se esta usando como archivo externo
         if TERMINAL:
             with open(RESP_SOLVE, "r") as read_:
-                hash = read_.read().strip()
+                hash = md5(read_.read().strip().encode("UTF-8")).hexdigest()
 
         # Si es que se esta importando como libreria
         else:
@@ -175,7 +175,7 @@ if __name__ == "__main__":
     if len(argv) != 6 or all(x != argv[1] for x in params_) or "-R" not in argv or "-ID" not in argv:
         print(usage_); exit(0)
 
-    RESP_SOLVE = argv[4]
+    RESP_SOLVE = argv[3]
 
     ID = argv[5]
 
