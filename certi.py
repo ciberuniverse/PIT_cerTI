@@ -31,7 +31,7 @@ ID = None
 
 usage_ = """
 Uso: 
-    ceri.py --check|send -R <tu_archivo_de_respuestas> -ID <ID_Proporcionada_en_cerTI>
+    ceri.py --check|solve -R <tu_archivo_de_respuestas> -ID <ID_Proporcionada_en_cerTI>
 
 Ejemplo:
     certy.py --check -R respuestas.txt -ID PIT:d5098d199d0de6dacc877537cf6aab28
